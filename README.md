@@ -15,10 +15,10 @@ https://godoc.org/github.com/go-http-utils/headers
 ## Usage
 
 ```go
-impost (
+import (
   "fmt"
 
-  "github.com/DavidCai1993/headers"
+  "github.com/go-http-utils/headers"
 )
 
 fmt.Println(headers.HeaderAcceptCharset)
