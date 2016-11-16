@@ -21,10 +21,10 @@ import (
   "github.com/go-http-utils/headers"
 )
 
-fmt.Println(headers.HeaderAcceptCharset)
+fmt.Println(headers.AcceptCharset)
 // -> "Accept-Charset"
 
-fmt.Println(headers.HeaderIfNoneMatch)
+fmt.Println(headers.IfNoneMatch)
 // -> "If-None-Match"
 
 // ...
