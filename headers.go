@@ -3,7 +3,7 @@ package headers
 import "unicode"
 
 // Version is this package's version
-const Version = "1.1.0"
+const Version = "2.0.0"
 
 // HTTP headers
 const (
@@ -36,12 +36,12 @@ const (
 	XRequestedWith                = "X-Requested-With"
 	AccessControlAllowOrigin      = "Access-Control-Allow-Origin"
 	AccessControlAllowMethods     = "Access-Control-Allow-Methods"
-	AccessControlAllows           = "Access-Control-Allow-s"
+	AccessControlAllowHeaders     = "Access-Control-Allow-Headers"
 	AccessControlAllowCredentials = "Access-Control-Allow-Credentials"
-	AccessControlExposes          = "Access-Control-Expose-s"
+	AccessControlExposeHeaders    = "Access-Control-Expose-Headers"
 	AccessControlMaxAge           = "Access-Control-Max-Age"
 	AccessControlRequestMethod    = "Access-Control-Request-Method"
-	AccessControlRequests         = "Access-Control-Request-s"
+	AccessControlRequestHeaders   = "Access-Control-Request-Headers"
 	AcceptPatch                   = "Accept-Patch"
 	AcceptRanges                  = "Accept-Ranges"
 	Allow                         = "Allow"
