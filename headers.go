@@ -1,7 +1,9 @@
 package headers
 
+import "unicode"
+
 // Version is this package's version
-const Version = "1.0.0"
+const Version = "1.1.0"
 
 // HTTP headers
 const (
@@ -80,3 +82,21 @@ const (
 	XRealIP                = "X-Real-IP"
 	XCSRFToken             = "X-CSRF-Token"
 )
+
+// Normalize formats the input header to the formation of "Xxx-Xxx".
+func Normalize(header string) string {
+	last := '-'
+	normalized := make([]rune, len(header))
+
+	for i, b := range header {
+		if last != '-' {
+			normalized[i] = unicode.ToLower(b)
+		} else {
+			normalized[i] = unicode.ToUpper(b)
+		}
+
+		last = b
+	}
+
+	return string(normalized)
+}
