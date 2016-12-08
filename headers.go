@@ -3,7 +3,7 @@ package headers
 import "unicode"
 
 // Version is this package's version
-const Version = "2.0.0"
+const Version = "2.1.0"
 
 // HTTP headers
 const (
@@ -81,6 +81,9 @@ const (
 	XForwardedFor          = "X-Forwarded-For"
 	XRealIP                = "X-Real-IP"
 	XCSRFToken             = "X-CSRF-Token"
+	XRatelimitLimit        = "X-Ratelimit-Limit"
+	XRatelimitRemaining    = "X-Ratelimit-Remaining"
+	XRatelimitReset        = "X-Ratelimit-Reset"
 )
 
 // Normalize formats the input header to the formation of "Xxx-Xxx".
