@@ -1,6 +1,8 @@
 package headers
 
-import "unicode"
+import (
+	"net/textproto"
+)
 
 // Version is this package's version
 const Version = "2.1.0"
@@ -88,18 +90,5 @@ const (
 
 // Normalize formats the input header to the formation of "Xxx-Xxx".
 func Normalize(header string) string {
-	last := '-'
-	normalized := make([]rune, len(header))
-
-	for i, b := range header {
-		if last != '-' {
-			normalized[i] = unicode.ToLower(b)
-		} else {
-			normalized[i] = unicode.ToUpper(b)
-		}
-
-		last = b
-	}
-
-	return string(normalized)
+	return textproto.CanonicalMIMEHeaderKey(header)
 }
