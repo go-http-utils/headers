@@ -18,6 +18,7 @@ const (
 	ContentLength                 = "Content-Length"
 	ContentMD5                    = "Content-MD5"
 	ContentType                   = "Content-Type"
+	DoNotTrack                    = "DNT"
 	IfMatch                       = "If-Match"
 	IfModifiedSince               = "If-Modified-Since"
 	IfNoneMatch                   = "If-None-Match"
